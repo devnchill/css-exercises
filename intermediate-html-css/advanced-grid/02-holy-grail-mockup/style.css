@@ -89,12 +89,24 @@
   font-weight: normal;
 }
 /*---------------------Solution---------------------------*/
+ul > li {
+  list-style: none;
+}
 .container {
   display: grid;
   grid-template: 2fr 1fr 6fr 1fr/1fr 4fr;
 }
 .header {
+  display: grid;
   grid-area: 1/1/2/3;
+  grid-template-columns: 1fr 4fr;
+}
+.logo {
+  justify-self: start;
+}
+.menu > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .sidebar {
   grid-area: 2/1/4/2;
@@ -108,4 +120,3 @@
 .footer {
   grid-area: -1/1/-2/3;
 }
-
